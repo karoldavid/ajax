@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+  </head>
+
+  <body>
+
+    <div id="wiki" class="wikipedia">
+      <h4>Wikipedia</span></h4>
+      <ul id="wikipedia-links" data-bind="template: {name: 'wikipediaList', foreach: wikipediaLinks}"></ul>
+    </div>
+
+    <!-- Wikipedia map region info link list -->
+    <script type="text/html" id="wikipediaList">
+      <li>
+        <a data-bind="attr:{href: url, title: url}, text: title" target="_blank"></a>
+        <p data-bind="text: definition || 'no short description available'"></p>
+      </li>
+    </script>
+
+    <script src="js/lib/jquery-1.11.3.js"></script>
+    <script src="js/lib/knockout-3.3.0.js"></script>
+    <script src="js/test.js"></script>
+
+  </body>
+</html>
