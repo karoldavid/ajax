@@ -1,11 +1,9 @@
 (function() {
 
-
 	var GetWikiLinks = function() {
         var self = this;
 
         self.links = ko.observableArray();
-
         self.getLinks = ko.computed(function() {
 
             var wikiRequestLinksTimeout = setTimeout(function() {
